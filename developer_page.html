@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Developer Page</title>
+    <style>
+        /* Add your custom CSS styling here */
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            text-align: center;
+            background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            z-index: 1;
+        }
+
+        .Header-title {
+            margin: 0;
+            font-size: 72px;
+            font-weight: bolder;
+        }
+
+        .tagline {
+            margin: 0;
+            font-size: large;
+            animation: glowing 2s infinite;
+        }
+
+        @keyframes glowing {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content h2 {
+            margin-top: 40px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        
+.project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.project-image {
+    flex: 1;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-description {
+    flex: 2;
+    padding: 20px;
+}
+
+.project-description h3 {
+    margin-top: 0;
+}
+
+.project-description a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-description a:hover {
+    text-decoration: underline;
+}
+
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1 class="Header-title">We are Circular X</h1>
+            <p class="tagline">We develop mobile games and mobile apps!</p>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>About Us</h2>
+        <p>We are a leading software company specializing in mobile app and game development. Our expert team creates innovative and captivating experiences for users. With a focus on quality and customer satisfaction, we turn ideas into reality. Choose us for exceptional mobile solutions that make a lasting impact.</p>
+
+       
+        <div class="port">
+            <h2>Portfolio</h2>
+            <div class="project">
+                <img src="1.png" alt="Project 1">
+                <div class="project-description">
+                    <h3>Water tracker</h3>
+                    <p>Water Tracker 2023 is the ultimate app for anyone looking to improve their daily water intake and overall health. Our user-friendly interface makes it easy and effortless to monitor your hydration levels, set personalized daily targets, and earn rewards for hitting your goals. With this comprehensive daily water tracker, you can track your water intake and stay on top of your hydration no matter how busy your day gets.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.circleio.watertracker">View on Play Store</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="2.png" alt="Project 2">
+                <div class="project-description">
+                    <h3>Legacy Defenders - Mobile</h3>
+                    <p>🏰 Legacy Defenders Mobile: Tower Defense Strategy Game 🛡️
+
+                        In Legacy Defenders Mobile, you embark on an epic journey to protect your kingdom from relentless enemy attacks.
+                        
+                    </p>
+                    <a href="https://play.google.com/store/apps/details?id=com.circularX.LegacyDefenders">View on Play Store</a>
+                </div>
+            </div>
+            <!-- Add more project divs as needed -->
+        </div>
+    <!-- Add more project divs as needed -->
+        <h2>Contact Us</h2>
+        <p>For more informations ,If you have any clarifications ,please contact us - isurulakmal200013@gmail.com</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CircularX. All rights reserved.</p>
+    </footer>
+</body>
+</html>
