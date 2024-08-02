@@ -4,29 +4,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Developer Page</title>
+    <title>CircularX - Mobile App and Game Development</title>
     <style>
         /* Add your custom CSS styling here */
         body {
             font-family: "Poppins", sans-serif;
             margin: 0;
             padding: 0;
-            
+            background-color: #f5f5f5;
         }
 
         header {
             position: relative;
             height: 100vh;
-            text-align: center;
-            background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-            background-size: cover;
-            background-position: center;
+             background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
         }
 
         .overlay {
+            align-self: center;
             position: absolute;
-            top: 0;
-            left: 0;
+          
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
@@ -34,10 +36,10 @@
 
         .header-content {
             position: absolute;
+            text-align: center;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
             z-index: 1;
         }
 
@@ -45,13 +47,14 @@
             margin: 0;
             font-size: 72px;
             font-weight: bolder;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .tagline {
             margin: 0;
-            
-            font-size: large;
+            font-size: 24px;
             animation: glowing 2s infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         @keyframes glowing {
@@ -67,94 +70,101 @@
         }
 
         .content {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            align-items: center;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .content h2 {
             margin-top: 40px;
+            font-size: 36px;
+            color: #0072c6;
         }
 
         .content p {
             margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.5;
         }
 
         footer {
-            background-color: #f2f2f2;
-            padding: 10px;
+            background-color: #0072c6;
+            color: white;
+            padding: 20px;
             text-align: center;
-            
+            font-size: 16px;
         }
-        h2{
-            font-size: 30px;
+
+        .project {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        
-.project {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-}
 
-.project-image {
-    flex: 1;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-}
+        .project-image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+        }
 
-.project-description {
-    flex: 2;
-    padding: 20px;
-}
+        .project-description {
+            flex: 2;
+            padding: 30px;
+            background-color: white;
+        }
 
-.project-description h3 {
-    margin-top: 0;
-}
+        .project-description h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #0072c6;
+        }
 
-.project-description a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .project-description a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0072c6;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-.project-description a:hover {
-    text-decoration: underline;
-}
+        .project-description a:hover {
+            text-decoration: underline;
+        }
 
-/* Navigation Bar Styles */
-.navbar {
-    background-color:transparent;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
+        .navbar {
+            background-color: transparent;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
 
-.navbar a {
-    float: right;
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+        .navbar a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-.navbar a:hover {
- 
-    color: rgb(253, 173, 0);
-}
+        .navbar a:hover {
+            color: #00a8e8;
+        }
 
-.navbar a.active {
-   
-    color: rgb(253, 173, 0);
-}
-
-        /* Add more styles as needed */
+        .navbar a.active {
+            color: #00a8e8;
+        }
     </style>
 </head>
 <body>
@@ -164,61 +174,52 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
         <a href="OrganicquestPrivacyPolicy.html">Organic Quest</a>
-
     </div>
 
     <header>
-        <div class="overlay"></div>
-        <div class="header-content">
-            <h1 class="Header-title">We are Circular X</h1>
-            <p class="tagline">We develop mobile games and mobile apps!</p>
+        <div class="overlay">
+            <div class="header-content">
+                <h1 class="Header-title">CircularX</h1>
+                <p class="tagline">Mobile Apps and Games Development</p>
+            </div>
         </div>
+        
     </header>
 
     <div class="content">
         <h2 id="about">About Us</h2>
         <p>We are a leading software company specializing in mobile app and game development. Our expert team creates innovative and captivating experiences for users. With a focus on quality and customer satisfaction, we turn ideas into reality. Choose us for exceptional mobile solutions that make a lasting impact.</p>
 
-       
         <div class="port" id="portfolio">
             <h2>Portfolio</h2>
             <div class="project">
-                <img src="1.png" alt="Project 1">
+                <div class="project-image" style="background-image: url('1.png');"></div>
                 <div class="project-description">
-                    <h3>Water tracker</h3>
-                    <p>Water Tracker 2023 is the ultimate app for anyone looking to improve their daily water intake and overall health. Our user-friendly interface makes it easy and effortless to monitor your hydration levels, set personalized daily targets, and earn rewards for hitting your goals. With this comprehensive daily water tracker, you can track your water intake and stay on top of your hydration no matter how busy your day gets.</p>
+                    <h3>Water Tracker</h3>
+                    <p>Water Tracker 2023 is the ultimate app for anyone looking to improve their daily water intake and overall health. Our user-friendly interface makes it easy and effortless to monitor your hydration levels, set personalized daily targets, and earn rewards for hitting your goals.</p>
                     <a href="https://play.google.com/store/apps/details?id=com.circleio.watertracker">View on Play Store</a>
                 </div>
             </div>
             <div class="project">
-                <img src="2.png" alt="Project 2">
+                <div class="project-image" style="background-image: url('2.png');"></div>
                 <div class="project-description">
                     <h3>Legacy Defenders - Mobile</h3>
-                    <p>🏰 Legacy Defenders Mobile: Tower Defense Strategy Game 🛡️
-
-                        In Legacy Defenders Mobile, you embark on an epic journey to protect your kingdom from relentless enemy attacks.
-                        
-                    </p>
+                    <p>Legacy Defenders Mobile: Tower Defense Strategy Game. Embark on an epic journey to protect your kingdom from relentless enemy attacks.</p>
                     <a href="https://play.google.com/store/apps/details?id=com.circularX.LegacyDefenders">View on Play Store</a>
                 </div>
             </div>
             <div class="project">
-                <img src="feature-organic.jpg" alt="Project 2">
+                <div class="project-image" style="background-image: url('feature-organic.jpg');"></div>
                 <div class="project-description">
                     <h3>Organic Quest</h3>
-                    <p>🏰 Organic Quest -Organic Reaction Game
-
-                        Organic Quest is a fun and educational game that challenges players to identify organic molecules and reactions. Test your knowledge of organic chemistry and learn new concepts in a fun and engaging way. With multiple levels and game modes, Organic Quest is perfect for students, educators, and anyone interested in chemistry.
-                        
-                    </p>
-                    <a href="#">Releasing soon...!</a>
+                    <p>Organic Quest is a fun and educational game that challenges players to identify organic molecules and reactions. Test your knowledge of organic chemistry and learn new concepts in a fun and engaging way.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.circularx.io.organic">View on Play Store</a>
                 </div>
             </div>
-            <!-- Add more project divs as needed -->
         </div>
-    <!-- Add more project divs as needed -->
+
         <h2 id="contact">Contact Us</h2>
-        <p>For more informations ,If you have any clarifications ,please contact us - isurulakmal200013@gmail.com</p>
+        <p>For more information or if you have any clarifications, please contact us at isurulakmal200013@gmail.com</p>
     </div>
 
     <footer>
